@@ -6,3 +6,4 @@ dist/
 test/
 .eslintrc.json
 .vscodeignore
+jsconfig.json

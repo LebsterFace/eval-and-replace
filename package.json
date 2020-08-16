@@ -4,6 +4,10 @@
 	"description": "Execute CoffeeScript or JavaScript code and replace the code with the result",
 	"publisher": "Lebster",
 	"version": "1.0.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/LebsterFace/eval-and-replace.git"
+	  },
 	"engines": {
 		"vscode": "^1.47.0"
 	},
