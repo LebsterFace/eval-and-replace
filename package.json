@@ -1,0 +1,78 @@
+{
+	"name": "eval-and-replace",
+	"displayName": "Eval and Replace",
+	"description": "Execute CoffeeScript or JavaScript code and replace the code with the result",
+	"publisher": "Lebster",
+	"version": "1.0.0",
+	"engines": {
+		"vscode": "^1.47.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"javascript",
+		"replace",
+		"eval",
+		"js",
+		"coffeescript"
+	],
+	"icon": "images/icon128.png",
+	"activationEvents": [
+		"onCommand:eval-and-replace.eval-javascript",
+		"onCommand:eval-and-replace.eval-coffeescript"
+	],
+	"main": "./dist/main.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "eval-and-replace.eval-javascript",
+				"title": "Eval and replace: Js"
+			},
+			{
+				"command": "eval-and-replace.eval-coffeescript",
+				"title": "Eval and replace: Coffee"
+			}
+		],
+		"configuration": {
+			"title": "Eval and Replace",
+			"properties": {
+				"eval-and-replace.debug-time": {
+					"type": "boolean",
+					"default": false,
+					"description": "Show execution time"
+				},
+				"eval-and-replace.force-replace": {
+					"type": "boolean",
+					"default": false,
+					"description": "Replace the selected text even if the code resulted in an error."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js",
+		"webpack": "webpack --mode production",
+		"webpack-dev": "webpack --mode developer",
+		"vscode:prepublish": "npm run webpack"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.0",
+		"@types/node": "^14.0.27",
+		"@types/vscode": "^1.47.0",
+		"eslint": "^7.6.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.0.1",
+		"typescript": "^3.8.3",
+		"vscode-test": "^1.4.0",
+		"webpack": "^4.44.1",
+		"webpack-cli": "^3.3.12"
+	},
+	"dependencies": {
+		"coffeescript": "^2.5.1",
+		"vm": "^0.1.0"
+	}
+}

@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+*.vsix
+.vscode
+dist/
+test/
+.eslintrc.json
+.vscodeignore
