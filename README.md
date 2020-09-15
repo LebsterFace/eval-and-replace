@@ -3,6 +3,7 @@
 Execute CoffeeScript or JavaScript code from the editor and replace the code with the result.
 
 [Original atom plugin](https://atom.io/packages/eval-and-replace)
+[Get the extenstion](https://marketplace.visualstudio.com/items?itemName=Lebster.eval-and-replace)
 
 ## Demo
 
