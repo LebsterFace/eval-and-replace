@@ -4,6 +4,8 @@ Execute CoffeeScript or JavaScript code from the editor and replace the code wit
 
 [Original atom plugin](https://atom.io/packages/eval-and-replace)
 
+[Get the extension](https://marketplace.visualstudio.com/items?itemName=Lebster.eval-and-replace)
+
 ## Demo
 
 ![Demonstration Gif](images/demo.gif)
