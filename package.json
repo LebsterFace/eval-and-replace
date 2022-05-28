@@ -10,14 +10,15 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:eval-and-replace.helloWorld"
+		"onCommand:eval-and-replace.eval-javascript"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "eval-and-replace.helloWorld",
-				"title": "Hello World"
+				"command": "eval-and-replace.eval-javascript",
+				"title": "Eval and Replace: JS",
+				"icon": "$(code)"
 			}
 		]
 	},
@@ -39,5 +40,8 @@
 		"glob": "^7.2.0",
 		"mocha": "^9.2.2",
 		"typescript": "^4.5.5"
+	},
+	"dependencies": {
+		"vm2": "^3.9.9"
 	}
 }

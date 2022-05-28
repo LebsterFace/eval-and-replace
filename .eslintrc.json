@@ -11,11 +11,11 @@
     "rules": {
         "@typescript-eslint/naming-convention": "warn",
         "@typescript-eslint/semi": "warn",
-        "curly": "warn",
+        "curly": "off",
         "eqeqeq": "warn",
         "no-throw-literal": "warn",
         "semi": "warn",
-		"quotes": ["warn", "double", { "avoidEscape": true }]
+		"quotes": ["warn", "double", { "avoidEscape": true }],
     },
     "ignorePatterns": [
         "out",
