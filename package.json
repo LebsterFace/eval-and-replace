@@ -1,24 +1,31 @@
 {
 	"name": "eval-and-replace",
 	"displayName": "Eval and Replace",
-	"description": "Evaluate inline JS code, and replace it with the result",
-	"version": "0.0.1",
-	"engines": {
-		"vscode": "^1.67.0"
+	"description": "Execute JavaScript code and replace the code with the result",
+	"publisher": "Lebster",
+	"version": "2.0.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/LebsterFace/eval-and-replace.git"
 	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onCommand:eval-and-replace.eval-javascript"
-	],
+
+	"engines": {"vscode": "^1.67.0"},
+	"categories": ["Other"],
+	"keywords": ["javascript", "eval", "js", "eval-and-replace"],
+
+	"activationEvents": ["onCommand:eval-and-replace.eval-javascript"],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
 				"command": "eval-and-replace.eval-javascript",
-				"title": "Eval and Replace: JS",
-				"icon": "$(code)"
+				"title": "Eval and Replace: JS"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "eval-and-replace.eval-javascript",
+				"key": "ctrl+shift+j"
 			}
 		]
 	},
@@ -28,6 +35,8 @@
 		"watch": "tsc -watch -p ./",
 		"lint": "eslint src --ext ts"
 	},
+
+	"icon": "images/icon128.png",
 	"devDependencies": {
 		"@types/glob": "^7.2.0",
 		"@types/mocha": "^9.1.0",

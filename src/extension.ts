@@ -63,7 +63,10 @@ const main = () => {
 	editor.edit(editBuilder => {
 		try {
 			for (const selection of sortedSelections) {
-				const result = vm.run(editor.document.getText(selection));
+				const text = editor.document.getText(selection);
+				if (text.trim() === "") continue;
+
+				const result = vm.run(text);
 				vm.setGlobal("$prev", result);
 				editBuilder.replace(selection, display(result));
 			}

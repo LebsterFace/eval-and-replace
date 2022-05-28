@@ -1,70 +1,45 @@
-# eval-and-replace README
+# Eval and Replace
 
-This is the README for your extension "eval-and-replace". After writing up a brief description, we recommend including the following sections.
+Execute JavaScript code and replace the code with the result
 
-## Features
+[Original atom plugin](https://atom.io/packages/eval-and-replace)
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+[Get the extension](https://marketplace.visualstudio.com/items?itemName=Lebster.eval-and-replace)
 
-For example if there is an image subfolder under your extension project workspace:
+## Demo
 
-\!\[feature X\]\(images/feature-x.png\)
+![Demonstration Gif](images/demo.gif)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Usage
+You can execute any JavaScript code by first selecting it and then running `Eval and Replace: JS` from the command palette (or by selecting it and using the default keybinding, <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd>)
 
-## Requirements
+## Multiple selections & pre-initialized values
+You can evaluate multiple expressions selected seperately, and each will be replaced seperately, however: the same context is used for all selections, so you can reuse
+variables.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+Additionally you have access to these pre-initialized global functions and variables:
 
-## Extension Settings
+* `i`, `j`, `n`, `x`, `y`, `z`: initialized with `0`
+* `a`, `s`: initialized with `''`
+* `PI`: Alias for `Math.PI` (etc. for other `Math` properties & methods)
+* `randomInt(min: number, max: number)`: generates a random integer between `min` and `max` (inclusive of both)
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+If you have any questions / concerns about this extension, reach out to me on Discord at `Lebster#0617`
 
-For example:
+## Change Log
 
-This extension contributes the following settings:
+## [2.0.0] - 2022-05-28
+### Changed
+ - Only one replacement is made per selection. If multiple lines are included in one selection, the entire selection is evaluated and then replaced with the value of the final line. To mimic the old behaviour, create one selection for each line.
+ - Certain types (e.g. `bigint`) now have special rules when being inserted as a replacement.
+### Removed
+ - Removed CoffeeScript support entirely.
+ - Removed both configuration options
+### Fixed
+ - Template literals can now be evaluated
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+## [1.0.0] - 2020-08-17
 
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+- Initial Release
 
 **Enjoy!**
