@@ -3,17 +3,26 @@
 	"displayName": "Eval and Replace",
 	"description": "Execute JavaScript code and replace the code with the result",
 	"publisher": "Lebster",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/LebsterFace/eval-and-replace.git"
 	},
-
-	"engines": {"vscode": "^1.67.0"},
-	"categories": ["Other"],
-	"keywords": ["javascript", "eval", "js", "eval-and-replace"],
-
-	"activationEvents": ["onCommand:eval-and-replace.eval-javascript"],
+	"engines": {
+		"vscode": "^1.67.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"javascript",
+		"eval",
+		"js",
+		"eval-and-replace"
+	],
+	"activationEvents": [
+		"onCommand:eval-and-replace.eval-javascript"
+	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
@@ -35,7 +44,6 @@
 		"watch": "tsc -watch -p ./",
 		"lint": "eslint src --ext ts"
 	},
-
 	"icon": "images/icon128.png",
 	"devDependencies": {
 		"@types/glob": "^7.2.0",
