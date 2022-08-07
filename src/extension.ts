@@ -6,25 +6,20 @@ const display = (x: unknown): string => {
 
 	switch (typeof x) {
 		case "bigint": return x.toString() + "n";
-		case "string": return x;
 
-		case "boolean":
 		case "function":
-		case "number":
 		case "symbol":
 			return x.toString();
 
-		case "object": {
-			if (x === null) return "null";
-			if (Array.isArray(x)) return `[${x.map(display).join(", ")}]`;
-			if (x instanceof Error ||
-				x instanceof RegExp
-			) return x.toString();
-
+		case "object":
+			if (x instanceof Error || x instanceof RegExp) return x.toString();
+		case "string":
+		case "boolean":
+		case "number":
 			return JSON.stringify(x);
-		}
 
-		default: return x + "";
+		default:
+			return x + "";
 	}
 };
 
