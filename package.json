@@ -3,7 +3,7 @@
 	"displayName": "Eval and Replace",
 	"description": "Execute JavaScript code and replace the code with the result",
 	"publisher": "Lebster",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/LebsterFace/eval-and-replace.git"
