@@ -13,7 +13,6 @@ const display = (x: unknown): string => {
 
 		case "object":
 			if (x instanceof Error || x instanceof RegExp) return x.toString();
-		case "string":
 		case "boolean":
 		case "number":
 			return JSON.stringify(x);
