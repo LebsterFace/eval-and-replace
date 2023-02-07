@@ -26,20 +26,6 @@ Additionally you have access to these pre-initialized global functions and varia
 
 If you have any questions / concerns about this extension, reach out to me on Discord at `Lebster#0617`
 
-## Change Log
-
-## [2.0.0] - 2022-05-28
-### Changed
- - Only one replacement is made per selection. If multiple lines are included in one selection, the entire selection is evaluated and then replaced with the value of the final line. To mimic the old behaviour, create one selection for each line.
- - Certain types (e.g. `bigint`) now have special rules when being inserted as a replacement.
-### Removed
- - Removed CoffeeScript support entirely.
- - Removed both configuration options
-### Fixed
- - Template literals can now be evaluated
-
-## [1.0.0] - 2020-08-17
-
-- Initial Release
+## [Change Log](CHANGELOG.md)
 
 **Enjoy!**

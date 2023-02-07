@@ -12,10 +12,15 @@ const display = (x: unknown): string => {
 			return x.toString();
 
 		case "object":
-			if (x instanceof Error || x instanceof RegExp) return x.toString();
+			if (x instanceof Error || x instanceof RegExp)
+				return x.toString();
 		case "boolean":
 		case "number":
 			return JSON.stringify(x);
+
+		case "string":
+			if (vscode.workspace.getConfiguration('eval-and-replace').get('escapeStrings'))
+				return JSON.stringify(x);
 
 		default:
 			return x + "";
@@ -66,6 +71,7 @@ const main = () => {
 			}
 		} catch (error) {
 			vscode.window.showErrorMessage(`Error while evaluating: ${display(error)}`);
+			console.error(error);
 			return;
 		}
 	});

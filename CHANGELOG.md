@@ -2,6 +2,9 @@
 
 All notable changes to the "eval-and-replace" extension will be documented in this file.
 
+## [2.3.0] - 2023-02-07
+### Added
+ - The option `eval-and-replace.escapeStrings` dictates whether strings should be passed to JSON.stringify
 ## [2.0.0] - 2022-05-28
 ### Changed
  - Only one replacement is made per selection. If multiple lines are included in one selection, the entire selection is evaluated and then replaced with the value of the final line. To mimic the old behaviour, create one selection for each line.

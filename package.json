@@ -3,7 +3,7 @@
 	"displayName": "Eval and Replace",
 	"description": "Execute JavaScript code and replace the code with the result",
 	"publisher": "Lebster",
-	"version": "2.2.0",
+	"version": "2.3.0",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/LebsterFace/eval-and-replace.git"
@@ -21,7 +21,6 @@
 		"eval-and-replace"
 	],
 	"activationEvents": [
-		"onCommand:eval-and-replace.eval-javascript"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -35,6 +34,18 @@
 			{
 				"command": "eval-and-replace.eval-javascript",
 				"key": "ctrl+shift+j"
+			}
+		],
+		"configuration": [
+			{
+				"title": "Eval and Replace",
+				"properties": {
+					"eval-and-replace.escapeStrings": {
+						"type": "boolean",
+						"default": false,
+						"markdownDescription": "If true, when the result of a replacement is a string, it will be kept as a valid string literal (as if it were passed to `JSON.stringify`). Set to false to remove quotes and escaped characters"
+					}
+				}
 			}
 		]
 	},
@@ -59,6 +70,6 @@
 		"typescript": "^4.5.5"
 	},
 	"dependencies": {
-		"vm2": "^3.9.9"
+		"vm2": "^3.9.14"
 	}
 }
