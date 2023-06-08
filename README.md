@@ -24,7 +24,7 @@ Additionally you have access to these pre-initialized global functions and varia
 * `PI`: Alias for `Math.PI` (etc. for other `Math` properties & methods)
 * `randomInt(min: number, max: number)`: generates a random integer between `min` and `max` (inclusive of both)
 
-If you have any questions / concerns about this extension, reach out to me on Discord at `Lebster#0617`
+If you have any questions / concerns about this extension, reach out to me on Discord at `lebster`
 
 ## [Change Log](CHANGELOG.md)
 
