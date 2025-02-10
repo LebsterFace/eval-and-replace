@@ -2,6 +2,9 @@
 
 All notable changes to the "eval-and-replace" extension will be documented in this file.
 
+## [2.4.0] - 2025-02-10
+### Added
+ - Ability to evaluate the current line without having to select it first
 ## [2.3.0] - 2023-02-07
 ### Added
  - The option `eval-and-replace.escapeStrings` dictates whether strings should be passed to JSON.stringify
@@ -14,7 +17,5 @@ All notable changes to the "eval-and-replace" extension will be documented in th
  - Removed both configuration options
 ### Fixed
  - Template literals can now be evaluated
-
 ## [1.0.0] - 2020-08-17
-
-- Initial Release
+ - Initial Release
