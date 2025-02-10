@@ -51,7 +51,14 @@ const main = () => {
 		}
 	});
 
-	const sortedSelections = editor.selections.slice().sort((a, b) => {
+	const selections = editor.selections.slice();
+
+	if (selections.length === 1 && selections[0].isEmpty) {
+		const line = editor.document.lineAt(selections[0].start.line);
+		selections[0] = new vscode.Selection(line.range.start, line.range.end);
+	}
+
+	const sortedSelections = selections.sort((a, b) => {
 		if (a.start.line < b.start.line) return -1;
 		if (a.start.line > b.start.line) return 1;
 		if (a.start.character < b.start.character) return -1;
