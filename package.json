@@ -3,7 +3,7 @@
 	"displayName": "Eval and Replace",
 	"description": "Execute JavaScript code and replace the code with the result",
 	"publisher": "Lebster",
-	"version": "2.5.0",
+	"version": "3.0.0",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/LebsterFace/eval-and-replace.git"
@@ -43,6 +43,29 @@
 						"type": "boolean",
 						"default": false,
 						"markdownDescription": "If true, when the result of a replacement is a string, it will be kept as a valid string literal (as if it were passed to `JSON.stringify`). Set to false to remove quotes and escaped characters"
+					},
+					"eval-and-replace.showErrorStacks": {
+						"type": "boolean",
+						"default": false,
+						"markdownDescription": "If true, errors which occur during evaluation of the pre-initialized script or selections will be shown in a notification containing their full stack trace. If false, only the error name and message will be included in the notification."
+					},
+					"eval-and-replace.compact": {
+						"type": "boolean",
+						"default": true,
+						"markdownDescription": "If true, the results of evaluations will be displayed on a single line. If false, multiple lines will be used."
+					},
+					"eval-and-replace.timeout": {
+						"type": "integer",
+						"default": 1000,
+						"minimum": 1,
+						"maximum": 4294967295,
+						"markdownDescription": "Timeout for each selection in milliseconds."
+					},
+					"eval-and-replace.preinitializedScript": {
+						"type": "string",
+						"editPresentation": "multilineText",
+						"default": "let yourCustomData = 'Hello world';",
+						"markdownDescription": "The value of this setting is executed one time before anything else, after you run the 'Eval and Replace: JS' command, in the context which each selection is then executed in. Use it to pre-initialize variables or add custom functions."
 					}
 				}
 			}
@@ -65,8 +88,5 @@
 		"@vscode/test-electron": "^2.5.2",
 		"eslint": "^9.25.1",
 		"typescript": "^5.8.3"
-	},
-	"dependencies": {
-		"vm2": "^3.9.19"
 	}
 }
