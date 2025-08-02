@@ -3,13 +3,13 @@
 	"displayName": "Eval and Replace",
 	"description": "Execute JavaScript code and replace the code with the result",
 	"publisher": "Lebster",
-	"version": "2.4.0",
+	"version": "2.5.0",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/LebsterFace/eval-and-replace.git"
 	},
 	"engines": {
-		"vscode": "^1.67.0"
+		"vscode": "^1.102.0"
 	},
 	"categories": [
 		"Other"
@@ -56,17 +56,15 @@
 	},
 	"icon": "images/icon128.png",
 	"devDependencies": {
-		"@types/glob": "^7.2.0",
-		"@types/mocha": "^9.1.0",
-		"@types/node": "14.x",
-		"@types/vscode": "^1.67.0",
-		"@typescript-eslint/eslint-plugin": "^5.16.0",
-		"@typescript-eslint/parser": "^5.16.0",
-		"@vscode/test-electron": "^2.1.3",
-		"eslint": "^8.11.0",
-		"glob": "^7.2.0",
-		"mocha": "^9.2.2",
-		"typescript": "^4.5.5"
+		"@types/mocha": "^10.0.10",
+		"@types/node": "20.x",
+		"@types/vscode": "^1.102.0",
+		"@typescript-eslint/eslint-plugin": "^8.31.1",
+		"@typescript-eslint/parser": "^8.31.1",
+		"@vscode/test-cli": "^0.0.11",
+		"@vscode/test-electron": "^2.5.2",
+		"eslint": "^9.25.1",
+		"typescript": "^5.8.3"
 	},
 	"dependencies": {
 		"vm2": "^3.9.19"
