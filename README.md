@@ -2,7 +2,7 @@
 
 Execute JavaScript code and replace the code with the result
 
-[Original atom plugin](https://atom.io/packages/eval-and-replace)
+[Original atom plugin](https://github.com/MoritzKn/atom-eval-and-replace)
 
 [Get the extension](https://marketplace.visualstudio.com/items?itemName=Lebster.eval-and-replace)
 
