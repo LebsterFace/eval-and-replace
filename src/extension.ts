@@ -19,7 +19,7 @@ const display = (x: unknown): string => {
 			return JSON.stringify(x);
 
 		case "string":
-			if (vscode.workspace.getConfiguration('eval-and-replace').get('escapeStrings'))
+			if (vscode.workspace.getConfiguration("eval-and-replace").get("escapeStrings"))
 				return JSON.stringify(x);
 
 		default:

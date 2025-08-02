@@ -52,7 +52,7 @@
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
 		"watch": "tsc -watch -p ./",
-		"lint": "eslint src --ext ts"
+		"lint": "eslint src"
 	},
 	"icon": "images/icon128.png",
 	"devDependencies": {
